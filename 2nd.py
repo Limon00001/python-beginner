@@ -1,31 +1,3 @@
-# Math related library functions
-
-from math import *  # we can use all math terms using this libraries
-
-print (max(50, 10))
-print (min(50, 10))
-print (abs(-7))
-print (pow(2, 3))              # pow(base number, power number)
-print (sqrt(25))
-print (round(3.8))
-print (floor(3.7))              # rounds decimal down to the nearest integer number
-print (ceil(3.7))               # rounds decimal up to the nearest integer number
-
-
-# Type Function
-num = 30
-print (type(num))
-
-num = 30.5
-print (type(num))
-
-name = "Rat"
-print (type(name))
-
-do = True
-print (type(do))
-
-
 # ------------------------------------- Formatted String -------------------------------------------
 num1 = 30
 num2 = 50
@@ -45,6 +17,13 @@ name3 = "My name is {}, I'm {}".format("John",36)
 print(name1)
 print(name2)
 print(name3)
+
+
+user_details = ("Jolie", "USA", 47)
+f_name = user_details[0]
+age = user_details[-1]
+message = f"{f_name} {age}"
+print(message)
 
 ''' --------------------------------- Another Type of String format --------------------------------------'''
 # syntax:

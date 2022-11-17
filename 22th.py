@@ -195,3 +195,27 @@ age = [51, 64, 54, 55]
 
 result = list(zip(name, age))
 print(result)
+
+
+
+# ------------------------------------------------------------------------------------------------
+fullNames = ["Jhon Teddy", "Angelina Jolie", "Chirstian Bale"]
+
+def full_name(n):
+    devide = n.split(" ")
+    return devide[1] + "," + devide[0]
+    
+final_output = [full_name(n) for n in fullNames]
+print (final_output)
+
+
+
+# ------------------------------------------------------------------------------------------------
+scores = [156, 70, 100, 265]
+
+def passed(score):
+    bonus = score +10
+    return bonus > 90
+
+passing_scores = [passed(score) for score in scores]
+print(passing_scores)

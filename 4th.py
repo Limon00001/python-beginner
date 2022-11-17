@@ -1,103 +1,102 @@
-# if-else condition
+# --------------------------------------------------- Modules ----------------------------------------------------------------
 
-# Examples ----------
+
+# Math related library functions
+
+from math import *  # we can use all math terms using this libraries
+
+print (max(50, 10))
+print (min(50, 10))
+print (abs(-7))
+print (pow(2, 3))              # pow(base number, power number)
+print (sqrt(25))
+print (round(3.8))
+print (floor(3.7))              # rounds decimal down to the nearest integer number
+print (ceil(3.7))               # rounds decimal up to the nearest integer number
+
+
+
+
+# for all mathematical terms
+import math
+
+pie = math.pi
+print(f"Value of pi is: {pie}")
+
+
+import statistics
+
+scores = [4, 4, 3, 6, 1, 2, 8, 4]
+mean = statistics.mean(scores)
+print(f"Mean score is: {mean}")
+
+
+# multiple different modules in the same file by adding comma
+'''
+import statistics, math
+
+diameters = [9, 7, 4, 6]
+result = statistics.mean(diameters)
+print(f"Mean diameter is: {result}")
+
+pie = math.pi
+print(f"Value of pi is: {pie}")
+'''
+
+
+# use the keyword 'from' to exact only the functionality ------------->
 # 1.
-price = 500
-if price < 500:                    # after the condition must use [ : ]
-    print ("I will buy the food")
-else:
-    print ("I will buy a drink")
+from math import pi
 
-
+print("Value of pi is: ", pi)
+# print(pi)
 
 # 2.
-age = 18
-if (age >= 18):
-    print ("You are an adult")
-else:
-    print ("You are not an adult")
+from statistics import mean
 
-# Note: after applying the condition press [TAB] means it's inside the condition
+test_score = [33, 7, 4, 6]
+result = mean(test_score)
+print(f"Mean result is: {result}")
 
+
+
+
+# Modify the modules name (renamed modules) ------------>
+# 1.
+import statistics as stats
+
+sales = [23, 43, 26, 26, 29, 18, 24]
+median = stats.median(sales)
+print(median)
+
+# 2.
+import statistics as stats
+
+ids = [33, 123, 22, 798, 23, 33]
+mode = stats.mode(ids)                            # 'mode' -> appears most often
+print(mode)
 
 # 3.
-Age = 20
-if (Age <= 10):
-    print ("You\'re in a Golden age")
-elif (Age <= 16):
-    print ("You'\re lucky")
-else:
-    print ("You\'re Gollay geso [lol]")
+import math as math_cons
 
-
-# Nasted if-else
-age1 = 70
-age2 = 50
-age3 = 100
-if age1 > age2:
-    if age1 > age3:
-        print ("Opps!! You have to grow up.")
-    else:
-        print ("Congratulations! You are available to enter now.")
-else:
-    if age2 < age3:
-        print ("Hi There!! Enter now.")
-    else:
-        print ("Sorry!!!")
-
-
-# Ternary Operator
-# It refers to the 3 operands.
-num1 = 40
-num2 = 10
-print (num1 if num1>num2 else num2)               # 3 operands code
-
-# or
-num1 = 40
-num2 = 10
-max = num1 if num1>num2 else num2
-print ("Maximum Value is: ", max)
+math = "Grade constant: "
+print(math)
+print(f"pi: {math_cons.pi}")
+print(f"Euler's number: {math_cons.e}")
 
 
 
-# Logical Operators (and, or, not)
-# 1.
-salary = 5000
-vacation_day = 4
-if salary > 4500 and vacation_day > 3:
-    print ("I will do the job")
-else:
-    print ("Give it to the others")
 
 
-# 2.
-ch = "z"
-if ch == "a" or ch == "e" or ch == "i" or ch == "o" or ch == "u":
-    print ("Vowel")
-else:
-    print ("Consonent")
+# Type Function
+num = 30
+print (type(num))
 
+num = 30.5
+print (type(num))
 
+name = "Rat"
+print (type(name))
 
-# Letter Grade example
-marks = float(input("Enter the marks: "))
-if marks>=90 and marks<=100:
-    print("Grade is: A")
-elif marks>=85 and marks<=89:
-    print("Grade is: A-")
-elif marks>=80 and marks<=84:
-    print("Grade is: B+")
-elif marks>=75 and marks<=79:
-    print("Grade is: B")
-elif marks>=70 and marks<=74:
-    print("Grade is: B-")
-elif marks>=65 and marks<=69:
-    print("Grade is: C+")
-elif marks>=60 and marks<=64:
-    print("Grade is: C")
-elif marks>=55 and marks<=59:
-    print("Grade is: C-")
-elif marks>=50 and marks<=54:
-    print("Grade is: D")
-else:
-    print("Grade is: F")
+do = True
+print (type(do))

@@ -1,47 +1,112 @@
-# ----------------------------------------- Reading a file by python ------------------------------------------------
+# While loop & For loop
+
+x = 1
+x = 110
+x = 69
+#now
+print (x)
+# output will be 69
+# In pyhton, It thinks that value updated that's why it prints last value
+
+# 1.
+i = 1                                       # initialization
+while i<=10:                                # condition
+    print ('You\'re a funny person')        # statements
+    i+=1  #or use -> i = i + 1              # update
+
+# 2.
+i = 1
+while i<=10:
+    print (i)
+    i+=1
+
+# 3.Print even number
+i = 1
+while i<=100:
+    if i%2 == 0:
+        print (i)
+    i+=1
 
 
-file = open("14th.txt","r+")                    # for opening, open("txt_file","readable or writable files mode")
-# -> for read operation, "r"
-# -> for write operation, "w"                   -> will overwrite any existing content
-# -> for read & write operation, "r+"
-# -> for append operation, "a"                  -> will append to the end of the file
-# -> to create new file, "x"                    -> will create a file, returns an error if the file exist
+# 4. Print odd number
+i = 1
+while i<=100:
+    if i%2 == 0:
+        print (i + 1)
+    i+=1
 
-# If the file is located in a different location, you will have to specify the file path, like this:
-# -> open("D:\\myfiles\file_name.txt", "operation_mode")
+# 5.
+data = [5, 6, 7, 8, 9, 15, 30]
+i = 0
+while i<=6:
+    print (data[i])
+    i+=1
 
-# print(file.readable())                         # check if it is readable
-# print(file.writable())                         # check if it is writable
+# Here we need to track the index number. That's why "For Loop" is better than "While Loop".
 
-# reading from a txt file
-text = file.read()
-print(text)
+# 6.
+user = int(input("Enter last number: "))
+sum = 0
+i = 1
+while i <= user:
+    sum += i
+    i += 1
+print ("Sum is", sum)
 
-# checking the length
-length = len(text)
-print(length)
 
-# to show files as list
-files = file.readlines()
-print(files)
+# Break & Cntinue
+''' "Break and Continue" will work under the if-else condition
+ #  Break refers to remove everything else from that item
+ #  Continue refers to skip that item '''
 
-# using readlines, '\n' appears. To remove '\n' use -> strip()
-# Strip removes the leading and trailing characters like:
-strip_file = ",,,,,rrttgg.....That's fine now....rrr"
-garbage_ch = strip_file.strip(",.grt")                                   # Syntax -> "string.strip(characters)"
-                                                                         # Here, which characters want to be removed.
-print(garbage_ch)
+# Break
+i = 1
+while i <= 100:
+    if i == 20:
+        break
+    print(i, end =" ")
+    i += 1
+print("Congratulations!!")
 
-# Strip removes spaces at the beginning and at the end of the string
-txt = "     Hello.     "
-r = txt.strip()
 
-print(r, "Nice to meet you.")
+# Continue
+for i in range(1,10):
+    if i == 7:
+        continue
+    print(i, end =" ")
+    i+=1
+print("Congratulations!!")
 
-# using loop, can see the whole file
-for x in file:
-    print(x)
 
-# close the file
-file.close()
+
+# For Loop
+data = [5, 6, 7, 8, 9, 15, 30]
+for x in data:
+    print (x)
+
+
+# ---------------------------------------
+prices = [10, 38, 40, 58, 62]
+
+in_Line = [price/2 for price in prices]
+print(in_Line)
+
+# or
+multi_Line = []
+for price in prices:
+    half_price = price/2
+    multi_Line.append(half_price)
+
+print(multi_Line)
+
+# or
+def half(num):
+    return num/2
+halfed = [half(price) for price in prices]
+print(halfed)
+
+# -------------------------------------------------------------------
+names = ["Smith", "Jackson", "Robert"]
+
+add = ["Mr." + name for name in names]
+print(add)

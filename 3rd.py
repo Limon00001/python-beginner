@@ -1,19 +1,31 @@
 # Lists
 
 # (i)
-from turtle import position
+# from turtle import position
 
 data = [5, 6, 7, 8, 9, 15, 30]
 print (data[2])
 print (data[5])
+print (data[:])
+print (data[-3:])
+print (data[2:5])           # index number : count from first value (where data will stop)
+print (data[:3])            # After the colon (:) indicates where the data should stop
 print (data[2:])            # Here will be printed from index 2
 print (data[-1])            # will start printing from the reverse side
+print (data[8:])            # specifying a range outside the length of a list will return an empty list
+print (data[6:0])           # start index and stop data don't match, will return an empty list
+print (data[1:5:2])         # start : stop : step [ step determines how python steps between start and end]
+print (data[::2])           # using the step value with no start or end value. By default it will work from the start and end of the full origin.
+print (data[3::-1])
+print (data[:3:2])
 print (data * 2)
 print (data.clear())
 
 data = [5, 6, 7, 8, 9, 15, 30]
 data2 = data.copy()
+data[-4] = 90
 print (data2)
+print(data)
 
 
 # (ii)  Knowing index number
@@ -46,6 +58,7 @@ print (len(friends))
 # Removing items
 friends = ["Rhino", "Elephant", "Snake", "Scorpion", "Lion"]
 friends.remove("Snake")
+del friends[-1]                     # 'del' keyword allows to delete objects
 print (friends)
 
 # Another is pop. It will remove last element of a list.
@@ -179,3 +192,12 @@ students = {
 print(students[101])                           # print(students.get("101"))
 print(students.get(106, "Not found"))
 print(students.get(103, "Not found"))
+
+
+# 'del' use in dictionary
+products = {"category": "book",
+            "price": 400,
+            "in_stock": True}
+
+del products["in_stock"]
+print(products)

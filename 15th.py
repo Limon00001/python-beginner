@@ -1,24 +1,20 @@
-# ----------------------------------------- Writing a file by python ------------------------------------------------
+# ---------------------------------------------- Condition in one line --------------------------------------------------------
+
+scores = [12, 47, 30, 29, 19, 35]
+
+high_scores = [score for score in scores if score > 20]
+print(high_scores)
 
 
-file = open("15th.txt","x")                     # for opening, open("txt_file","readable or writable files mode")
-# -> for read operation, "r"
-# -> for write operation, "w"                   -> will overwrite any existing content
-# -> for read & write operation, "r+"
-# -> for append operation, "a"                  -> will append to the end of the file
-# -> to create new file, "x"                    -> will create a file, returns an error if the file exist
+# -------------------------------------------------------------------------------
+websites = ["github.com", "facebook.com", "linkedin.in"]
 
-# If the file is located in a different location, you will have to specify the file path, like this:
-# -> open("D:\\myfiles\file_name.txt", "operation_mode")
+final = [website for website in websites if website.count(".in")>0]
+print(final)
 
-# print(file.readable())                         # check if it is readable
-# print(file.writable())                         # check if it is writable
 
-# add content in file
-file.write("\nThank me later")
+# -------------------------------------------------------------------------------
+humidity_percent = [40, 35, 20, 70, 99]
 
-# reading from a txt file
-text = file.read()
-print(text)
-
-file.close()
+ideal = [level for level in humidity_percent if level >= 30 and level <= 50]
+print(ideal)
